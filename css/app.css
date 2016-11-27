@@ -27,6 +27,7 @@ body {
   height: auto;
   width: 50%;
   margin-top: -3em;
+  position: relative;
 }
 
 .item {
@@ -35,6 +36,67 @@ body {
 
 .item--rect {
   opacity: 1;
+}
+
+.item--alex {
+  transform: translateY(3em);
+  animation: SlideY .6s ease-in-out .5s forwards, SlideYDown .6s ease-in-out 8s forwards;
+}
+
+.item--napier, .item--flag, .item--shep, .item--pen, .item--brackets {
+  transform: translateY(-1em);
+}
+
+.item--flag, .item--shep, .item--pen, .item--brackets {
+  background: #ffffff;
+}
+
+.item--veteran, .item--father, .item--designer, .item--developer {
+  transform: translateY(-1em) scale(0.8);
+  transform-origin: center;
+}
+
+.item--napier {
+  animation: SlideY .6s ease-in-out .5s forwards, SlideYUp .6s ease-in-out 8s forwards;
+}
+
+.item--flag {
+  animation: IconFall 1.75s ease-in-out 1s forwards;
+}
+
+.item--veteran {
+  animation: Fall 1.75s ease-in-out 1.2s forwards;
+}
+
+.item--dashes {
+  opacity: 1;
+  transform: scale(.01);
+  transform-origin: center;
+  animation: Scale .6s ease-in-out .5s forwards, DeScale .6s ease-in-out 8s forwards;
+}
+
+.item--shep {
+  animation: IconFall 1.75s ease-in-out 3s forwards;
+}
+
+.item--father {
+  animation: Fall 1.75s ease-in-out 3.2s forwards;
+}
+
+.item--pen {
+  animation: IconFall 1.75s ease-in-out 5s forwards;
+}
+
+.item--designer {
+  animation: Fall 1.75s ease-in-out 5.2s forwards;
+}
+
+.item--brackets {
+  animation: IconFall 1.75s ease-in-out 7s forwards;
+}
+
+.item--developer {
+  animation: Fall 1.75s ease-in-out 7.2s forwards;
 }
 
 .intro, .header, .page__content {
@@ -82,4 +144,69 @@ body {
   cursor: pointer;
   color: #ffffff;
   background: #2196f3;
+}
+
+@keyframes SlideY {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideYUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-1em);
+    opacity: 0;
+  }
+}
+
+@keyframes SlideYDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(3em);
+    opacity: 0;
+  }
+}
+
+@keyframes Scale {
+  to {
+    transform: scale(1);
+    transform-origin: center;
+  }
+}
+
+@keyframes DeScale {
+  to {
+    transform: scale(0);
+    transform-origin: center;
+    opacity: 0;
+  }
+}
+
+@keyframes IconFall {
+  20%, 80% {
+    transform: translateY(1em);
+    opacity: 1;
+  }
+  97%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes Fall {
+  20%, 80% {
+    transform: translateY(0) scale(0.8);
+    transform-origin: center;
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
 }
