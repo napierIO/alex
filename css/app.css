@@ -29,6 +29,14 @@ body {
   margin-top: -3em;
 }
 
+.item {
+  opacity: 0;
+}
+
+.item--rect {
+  opacity: 1;
+}
+
 .intro, .header, .page__content {
   display: flex;
   align-items: center;
