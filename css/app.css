@@ -14,12 +14,21 @@ body {
   color: #4d4d4d;
 }
 
-.wrapper {
+.wrapper, .intro {
   height: 100vh;
   width: 100vw;
 }
 
-.header, .page__content {
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.intro, .header, .page__content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +39,7 @@ body {
   width: 100%;
 }
 
-.page__content {
+.page__portfolio, .page__blog, .page__contact {
   height: 85vh;
   width: 80%;
   overflow: scroll;
@@ -47,21 +56,29 @@ body {
 }
 
 .blog__post--date, .blog__post--more {
-  font: 400, 1.3em, #cccccc;
+  font: 400, 1.3em;
+}
+
+.blog__post--date {
+  color: #cccccc;
+}
+
+.blog__post--title {
+  font: 400, 2em;
+}
+
+.blog__post--copy {
+  font: 400, 1.4em, #b3b3b3;
+}
+
+.blog__post--more, .blog__post--title {
+  color: #4d4d4d;
 }
 
 .blog__post--more:hover {
   cursor: pointer;
   color: #ffffff;
   background: #2196f3;
-}
-
-.blog__post--title {
-  font: 400, 2em, #999999;
-}
-
-.blog__post--copy {
-  font: 400, 1.4em, #b3b3b3;
 }
 
 
