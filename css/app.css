@@ -147,7 +147,7 @@ body {
   transform: translateY(-50%);
 }
 
-.nav--portfolio, .nav--blog, .nav--contact {
+.link--portfolio, .link--blog, .link--contact {
   height: 10px;
   width: 10px;
   border-radius: 100%;
